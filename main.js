@@ -36,7 +36,9 @@ if (myAge > juliaAge) {
 
 // Exercise 6 //
 
-// const classNames = ["Thomas", "Dima", "Jonas", "Maria", "Diogo", "Raul", "Hassan"];
-// console.log(classNames[0]);
-// console.log(classNames[6]);
-// for ()
+const classNames = ["Thomas", "Dima", "Jonas", "Maria", "Diogo", "Raul", "Hassan"];
+console.log(classNames[0]);
+console.log(classNames[6]);
+for (j = 0; j < classNames.length; j++) {
+    console.log(classNames[j])
+}
