@@ -102,64 +102,89 @@
 
 // Exercise 12 - YES
 
-function result() {
-  const a = 3;
-  const b = 5;
-  return "This is the result:" + a * b;
-}
-const c = result();
-console.log(c);
+// function result() {
+//   const a = 3;
+//   const b = 5;
+//   return "This is the result:" + a * b;
+// }
+// const c = result();
+// console.log(c);
 
 // Exercise 13 - YES
 
-function calculation(number1, number2) {
-  console.log("This is the result:" + number1 * number2);
-}
-calculation(5, 10);
-calculation(4, 20);
-calculation(8, 9);
+// function calculation(number1, number2) {
+//   console.log("This is the result:" + number1 * number2);
+// }
+// calculation(5, 10);
+// calculation(4, 20);
+// calculation(8, 9);
 
-// Exercise 14 - Fix 2nd option
+// Exercise 14 - YES
 
-function typeOfTriangle(side1, side2, side3) {
-  if (side1 == side2 && side1 == side3 && side2 == side3) {
-    console.log("Equilateral");
-  } else if (side1 == side2 && side1 === side3 && side2 !== side3) {
-    console.log("Isosceles");
-  } else if (side1 != side2 && side1 != side3 && side2 != side3) {
-    console.log("Scalene");
-  }
-  return typeOfTriangle;
-}
-typeOfTriangle(1, 2, 3);
+// function typeOfTriangle(side1, side2, side3) {
+//   if ((side1 == side2) && (side1 == side3) && (side2 == side3)) {
+//     console.log("Equilateral");
+//     // is there a shorter way to write this?
+//   } else if ((side1 === side2) && (side1 !== side3) && (side2 !== side3) || (side1 !== side2) && (side1 !== side3) && (side2 === side3) || (side1 !== side2) && (side2 !== side3) && (side1 === side3) ) {
+//     console.log("Isosceles");
+//   } else if ((side1 !== side2) && (side1 !== side3) && (side2 !== side3)) {
+//     console.log("Scalene");
+//   }
+//   return typeOfTriangle;
+// }
+// typeOfTriangle(4, 2, 1);
 
 // Exercise 15 - YES
 
-function getSmallestNumber() {
-  const numbers = [9,2,3,4,6,67,72,1,3]
-  let smallNumber = numbers[0] // lo zero indica il primo numero dell'array numbers (ovvero 9)
-  for (let i = 0; i < numbers.length; i++) {
-    // se un elemento dell'array è minore di numbers[0] (ovvero il num 9), bisogna aggiornare l'elemento dell'array con quell'elemento finché non troviamo il numero più basso
-    if (numbers[i] < smallNumber) {
-      smallNumber = numbers[i]
-    }
-  }
-  console.log(smallNumber);
-}
+// function getSmallestNumber() {
+//   const numbers = [9,2,3,4,6,67,72,1,3]
+//   let smallNumber = numbers[0] // lo zero indica il primo numero dell'array numbers (ovvero 9)
+//   for (let i = 0; i < numbers.length; i++) {
+//     // se un elemento dell'array è minore di numbers[0] (ovvero il num 9), bisogna aggiornare l'elemento dell'array con quell'elemento finché non troviamo il numero più basso
+//     if (numbers[i] < smallNumber) {
+//       smallNumber = numbers[i]
+//     }
+//   }
+//   console.log(smallNumber);
+// }
 // getSmallestNumber()
 
 // exercise 16 - YESSSSSS
 
-function getBiggestNumber() {
-  const numbers = [1,2,3]
-  let maxNumber = numbers[0] // lo zero indica il numero 1 dell'array
-  for (let i = 0; i < numbers.length; i++) {
-    // se qualunque elemento dell'array numbers (in questo caso 2 e 3) è maggiore di maxNumber, bisogna aggiornare il maxNumber con quel elemento dell'array (prima con 2, poi il loop avviene un'altra volta e il numero viene aggiornato con 3)
-    if (numbers[i] > maxNumber) { 
-      maxNumber = numbers[i]
-    }
+// function getBiggestNumber() {
+//   const numbers = [1,2,3]
+//   let maxNumber = numbers[0] // lo zero indica il numero 1 dell'array
+//   for (let i = 0; i < numbers.length; i++) {
+//     // se qualunque elemento dell'array numbers (in questo caso 2 e 3) è maggiore di maxNumber, bisogna aggiornare il maxNumber con quel elemento dell'array (prima con 2, poi il loop avviene un'altra volta e il numero viene aggiornato con 3)
+//     if (numbers[i] > maxNumber) { 
+//       maxNumber = numbers[i]
+//     }
     
-  }
-  console.log(maxNumber);
-}
+//   }
+//   console.log(maxNumber);
+// }
 // getBiggestNumber()
+
+// exercise 17
+
+// exercise 18 - il passaggio importante è assegnare una variabile a myColor.join e printare quella variabile, non "myColor.join"
+
+function joinedColors() {
+  const myColor = ["Red", "Green", "White", "Black"];
+  let colors = myColor.join(" ")
+  console.log(colors);
+}
+joinedColors()
+
+
+// exercise 19 - YES
+
+function reverseNumber() {
+  let myNumber = 12345
+  // let newNumber = myNumber.toString() // trasforma il numero in stringa
+  // let newNumber = myNumber.toString().split("") // trasforma la stringa in array
+  // let newNumber = myNumber.toString().split("").reverse() // gira l'array al contrario
+  let newNumber = myNumber.toString().split("").reverse().join("") // unisce elementi di un array e le virgolette rimuovono virgola
+  console.log(newNumber);
+}
+reverseNumber()
