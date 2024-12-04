@@ -156,10 +156,10 @@
 //   let maxNumber = numbers[0] // lo zero indica il numero 1 dell'array
 //   for (let i = 0; i < numbers.length; i++) {
 //     // se qualunque elemento dell'array numbers (in questo caso 2 e 3) è maggiore di maxNumber, bisogna aggiornare il maxNumber con quel elemento dell'array (prima con 2, poi il loop avviene un'altra volta e il numero viene aggiornato con 3)
-//     if (numbers[i] > maxNumber) { 
+//     if (numbers[i] > maxNumber) {
 //       maxNumber = numbers[i]
 //     }
-    
+
 //   }
 //   console.log(maxNumber);
 // }
@@ -168,10 +168,10 @@
 // exercise 17
 
 function firstIndex(array, index) {
-let myNumber = array[index] // it doesn't matter which array or index you'll use
-return myNumber
+  let myNumber = array[index]; // it doesn't matter which array or index you'll use
+  return myNumber;
 }
-let result = firstIndex([3,6,67,6],0) // store in a variable what the function is returning
+let result = firstIndex([3, 6, 67, 6], 0); // store in a variable what the function is returning
 // console.log(result);
 // firstIndex([3,6,67,6],0)
 
@@ -179,20 +179,19 @@ let result = firstIndex([3,6,67,6],0) // store in a variable what the function i
 
 function joinedColors() {
   const myColor = ["Red", "Green", "White", "Black"];
-  let colors = myColor.join(" ")
+  let colors = myColor.join(" ");
   console.log(colors);
 }
 // joinedColors()
 
-
 // exercise 19 - YES
 
 function reverseNumber() {
-  let myNumber = 12345
+  let myNumber = 12345;
   // let newNumber = myNumber.toString() // trasforma il numero in stringa
   // let newNumber = myNumber.toString().split("") // trasforma la stringa in array
   // let newNumber = myNumber.toString().split("").reverse() // gira l'array al contrario
-  let newNumber = myNumber.toString().split("").reverse().join("") // unisce elementi di un array e le virgolette rimuovono virgola
+  let newNumber = myNumber.toString().split("").reverse().join(""); // unisce elementi di un array e le virgolette rimuovono virgola
   console.log(newNumber);
 }
 // reverseNumber()
@@ -200,8 +199,8 @@ function reverseNumber() {
 // exercise 20 - YES
 
 function newOrder() {
-  let myWord = "christmas"
-  let newWord = myWord.split("").sort().join("")
+  let myWord = "christmas";
+  let newWord = myWord.split("").sort().join("");
   console.log(newWord);
 }
 // newOrder()
@@ -234,7 +233,7 @@ function newOrder() {
 // replaceLetters("JavaScript")
 
 function replaceLetters(word) {
-  let newWord = word.replace("JavaScript", "J1v1Script")
+  let newWord = word.replace("JavaScript", "J1v1Script");
   console.log(newWord);
 }
 // replaceLetters("JavaScript")
@@ -242,24 +241,34 @@ function replaceLetters(word) {
 // exercise 23 - YES
 
 function capitalLetters() {
-  let sentence = "prince of persia"
-  let words = sentence.split(" ")
- for (let i = 0; i < words.length; i++) {
-  words[i] = words[i][0].toUpperCase() + words[i].substring(1) //.substring() extracts characters between two positions and returns the string
- }
- words = words.join(" ")
- console.log(words);
+  let sentence = "prince of persia";
+  let words = sentence.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substring(1); //.substring() extracts characters between two positions and returns the string
+  }
+  words = words.join(" ");
+  console.log(words);
 }
 // capitalLetters()
 
 // exercise 24 - YES
 
 function evenNumbers(number) {
- for (let myNumber = 0; myNumber < number; myNumber++) {
-if (myNumber % 2 === 0) {
-  console.log(myNumber);
- }
- }
+  for (let myNumber = 0; myNumber < number; myNumber++) {
+    if (myNumber % 2 === 0) {
+      console.log(myNumber);
+    }
+  }
 }
 
 // evenNumbers(9)
+
+// exercise 25
+
+function oddNumbers(number1, number2) {
+  for (let myNumber = 0; myNumber <= number2; myNumber++) {
+    if (myNumber % 2 === 1) console.log(myNumber);
+  }
+}
+
+// oddNumbers(1, 13);
