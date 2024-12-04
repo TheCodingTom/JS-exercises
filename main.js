@@ -39,8 +39,8 @@
 // const classNames = ["Thomas", "Dima", "Jonas", "Maria", "Diogo", "Raul", "Hassan"];
 // console.log(classNames[0]);
 // console.log(classNames[6]);
-// for (j = 0; j < classNames.length; j++) {
-//     console.log(classNames[j])
+// for (i = 0; i < classNames.length; i++) {
+//     console.log(classNames[i])
 // }
 
 // Exercise 7A // even numbers
@@ -77,9 +77,9 @@
 
 // const array = [1, 2, 8, 3, 2]
 // let sum = 0;
-// for (j = 0; j < array.length; j++) {
-//     if (array[j] % 2 === 0) {
-//         sum = sum += array[j]
+// for (i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+//         sum = sum += array[i]
 //     }
 //     console.log(sum)
 // }
@@ -167,6 +167,14 @@
 
 // exercise 17
 
+function firstIndex(array, index) {
+let myNumber = array[index] // it doesn't matter which array or index you'll use
+return myNumber
+}
+let result = firstIndex([3,6,67,6],0) // store in a variable what the function is returning
+// console.log(result);
+// firstIndex([3,6,67,6],0)
+
 // exercise 18 - il passaggio importante è assegnare una variabile a myColor.join e printare quella variabile, non "myColor.join"
 
 function joinedColors() {
@@ -174,7 +182,7 @@ function joinedColors() {
   let colors = myColor.join(" ")
   console.log(colors);
 }
-joinedColors()
+// joinedColors()
 
 
 // exercise 19 - YES
@@ -187,4 +195,71 @@ function reverseNumber() {
   let newNumber = myNumber.toString().split("").reverse().join("") // unisce elementi di un array e le virgolette rimuovono virgola
   console.log(newNumber);
 }
-reverseNumber()
+// reverseNumber()
+
+// exercise 20 - YES
+
+function newOrder() {
+  let myWord = "christmas"
+  let newWord = myWord.split("").sort().join("")
+  console.log(newWord);
+}
+// newOrder()
+
+// exercise 21
+
+// function longestWord() {
+//   let mySentence = "today is a beautiful day"
+//   let array = mySentence.split(" ")
+//   let longWord = ["raul", "is", "a", "magician"];
+
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].lenght > longWord[i]) {
+//       longWord = array[i].lenght
+//     }
+// }
+// console.log(array);
+// }
+// longestWord()
+
+// exercise 22 - is the second method fine? NOPE
+
+// function replaceLetters(word) {
+//   let newWord = word.charAt(1)
+//   if (newWord = "a") {
+//     word.charAt(1) = "1"
+//   }
+//   console.log(word);
+// }
+// replaceLetters("JavaScript")
+
+function replaceLetters(word) {
+  let newWord = word.replace("JavaScript", "J1v1Script")
+  console.log(newWord);
+}
+// replaceLetters("JavaScript")
+
+// exercise 23 - YES
+
+function capitalLetters() {
+  let sentence = "prince of persia"
+  let words = sentence.split(" ")
+ for (let i = 0; i < words.length; i++) {
+  words[i] = words[i][0].toUpperCase() + words[i].substring(1) //.substring() extracts characters between two positions and returns the string
+ }
+ words = words.join(" ")
+ console.log(words);
+}
+// capitalLetters()
+
+// exercise 24 - YES
+
+function evenNumbers(number) {
+ for (let myNumber = 0; myNumber < number; myNumber++) {
+if (myNumber % 2 === 0) {
+  console.log(myNumber);
+ }
+ }
+}
+
+// evenNumbers(9)
